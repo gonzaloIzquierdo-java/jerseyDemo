@@ -22,6 +22,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<!-- Dependencia sonar cobertura -->
+		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../path_to_module_with_report/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 
 	<dependencies>
@@ -35,11 +37,18 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- Dependencia sonar   
+		<!-- Dependencia sonar   -->
 		<dependency>
 		    <groupId>org.sonarsource.scanner.maven</groupId>
 		    <artifactId>sonar-maven-plugin</artifactId>
 		    <version>3.4.0.905</version>
+		</dependency>
+		<!-- Dependencia sonar   
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>3.8.1</version>
+		    <scope>test</scope>
 		</dependency>
 		-->
 	</dependencies>
@@ -50,8 +59,24 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- Dependencia sonar cobertura test
+			<plugin>
+		      <groupId>org.jacoco</groupId>
+		      <artifactId>jacoco-maven-plugin</artifactId>
+		      <executions>
+		        <execution>
+		          <id>report</id>
+		          <goals>
+		            <goal>report-aggregate</goal>
+		          </goals>
+		          <phase>verify</phase>
+		        </execution>
+		      </executions>
+		    </plugin>
+		    -->
 		</plugins>
-		<!-- Dependencia sonar 
+		
+		<!-- Dependencia sonar-->
 		<pluginManagement>
 		    <plugins>
 		      <plugin>
@@ -61,7 +86,7 @@
 		      </plugin>
 		    </plugins>
 		  </pluginManagement>
-		  -->
+		   
 	</build>
 
 
