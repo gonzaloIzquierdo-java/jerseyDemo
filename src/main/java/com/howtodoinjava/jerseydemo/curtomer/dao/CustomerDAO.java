@@ -2,9 +2,8 @@ package com.howtodoinjava.jerseydemo.curtomer.dao;
 
 
 import java.util.List;
-
-
 import com.howtodoinjava.jerseydemo.curtomer.dto.Customer;
+
 
 public interface CustomerDAO {
 	

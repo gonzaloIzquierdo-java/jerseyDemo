@@ -84,8 +84,8 @@ public class CustomerDAOImpl implements CustomerDAO{
 	private Customer getCustomer1() {
 		 
 		 List<Contract> listContract1=new ArrayList<Contract>();
-		 listContract1.add(getContract("Contrato1"));
-		 listContract1.add(getContract("Contrato2"));
+		 listContract1.add(new Contract("Contrato1"));
+		 listContract1.add(new Contract("Contrato2"));
 		 
 		 return new Customer("50607896Y","Pepe Lopez","ACS",listContract1);
 		 
@@ -95,10 +95,10 @@ public class CustomerDAOImpl implements CustomerDAO{
 	 private Customer getCustomer2() {
 		 
 		 List<Contract> listContract1=new ArrayList<Contract>();
-		 listContract1.add(getContract("Contrato1"));
-		 listContract1.add(getContract("Contrato2"));
-		 listContract1.add(getContract("Contrato3"));
-		 listContract1.add(getContract("Contrato4"));
+		 listContract1.add(new Contract("Contrato1"));
+		 listContract1.add(new Contract("Contrato2"));
+		 listContract1.add(new Contract("Contrato3"));
+		 listContract1.add(new Contract("Contrato4"));
 		 
 		 return new Customer("66666666R","DIOS","Rayo Vallekano",listContract1);
 		 
@@ -106,12 +106,7 @@ public class CustomerDAOImpl implements CustomerDAO{
 	 }
 	 
 	 
-	 private Contract getContract(String numberContract) {
-		 
-		 return new Contract(numberContract);
-		 
-	 }
-
+	
 
 
 
