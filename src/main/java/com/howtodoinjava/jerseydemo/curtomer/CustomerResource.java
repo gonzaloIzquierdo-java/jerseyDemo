@@ -1,9 +1,6 @@
 package com.howtodoinjava.jerseydemo.curtomer;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
+
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -39,7 +36,7 @@ public class CustomerResource {
 	 @Produces(MediaType.APPLICATION_JSON)
 	 public Response getAllCustomers() {
 		 System.out.println("Entrada getAllCustomers");	
-		 System.out.println("Entrada getAllCustomers customerDAO="+customerDAO);	
+		 
 		 
 		 return Response
 	                .status(200)
@@ -54,7 +51,7 @@ public class CustomerResource {
 	 @Produces("application/json")
 	 public Response getCustomer(@PathParam("id") String id) {
 		 System.out.println("Entrada getCustomer con parametro:"+id);
-		 System.out.println("Entrada getCustomer  customerDAO.getAllCustomers():"+ customerDAO.getAllCustomers().size());
+		 
 		
 		
 		 Customer out=customerDAO.getCustomer(id);
@@ -72,8 +69,7 @@ public class CustomerResource {
 	 @POST
 	 @Produces(MediaType.APPLICATION_JSON)
 	 @Consumes(MediaType.APPLICATION_JSON)
-	 public Response createCustomer(Customer incustomer) {
-		 
+	 public Response createCustomer(Customer incustomer) {		 
 		 System.out.println("Entrada createCustomer");
 		 if(customerDAO.createCustomer(incustomer)) {
 			 return Response.status(201).entity(incustomer).build(); 			

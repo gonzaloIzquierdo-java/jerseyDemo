@@ -26,20 +26,20 @@ public class CustomerDAOImpl implements CustomerDAO{
 	
 	
 	public Customer getCustomer(String id) {
-		//1 funcion lambda		
+		//1 funcion lambda	
+		/*
 		 List<Customer> listCustomerOut=getAllCustomers().stream()
 		 			.filter(c -> id.equals(c.getDni()))
 		 			.collect(Collectors.toCollection(() -> new ArrayList<Customer>()));
 		 
-		 System.out.println("listCustomerOut="+listCustomerOut);
-		 System.out.println("listCustomerOut.size()="+listCustomerOut.size());
+		
 		 if(listCustomerOut.size()>0) {
 			 System.out.println("ENCONTRADO");
 			 return listCustomerOut.get(0);
 		 }else {
 			 System.out.println("NO ENCONTRADO");
 		 }
-		 
+		 */
 		//2 funcion lambda
 		 return evaluaCurstomer(id,c ->id.equals(c.getDni()));
 		
